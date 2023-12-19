@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>unistyle</title>
+  <link rel="stylesheet" href="style.css">
+    
+  <script src="angular.min.js"> </script>
+  <script src="admin.js"></script>
+</head>
+<div class="site-name">
+    <h1>UNIstyle<h2>
+</div>
+<div class="navigation">
+  <div><a href="profile.html">Profile</a></div>
+  <div><a href="products.html">Products</a></div>
+  <div><a href="logout.html">Logout</a></div>
+</div>
+
+
+
+<h2>Admin Page</h2>
+    
+    <div ng-app="myApp" ng-controller="myController">
+        <form name="myForm" >
+         <section>
+          <h4>Add/Remove Products</h4>
+          <label for="productId">Product ID</label>
+          <input type="text" id="productId" ng-model="product.id">
+
+          <label for="productQuantity">Quantity</label>r
+          <input type="text" id="productQuantity" ng-model="product.quantity">
+
+          <button ng-click="updateProduct()">
+            Update
+          </button>
+        </section>
+
+        <section>
+          <h4>Create new admin</h4>
+          <label for="newUsername">Username</label>
+          <input type="text" id="newUsername" ng-model="user.username">
+
+          <label for="newPassword">Password</label>
+          <input type="password" id="newPassword" ng-model="user.password">
+
+          <button ng-click="submit()">
+            Submit
+          </button>
+        </section>
+
+        <section>
+          <h4>Delete user</h4>
+          <label for="userIdToDelete">User ID</label>
+          <input type="text" id="userIdToDelete" ng-model="user.uid">
+
+          <button ng-click="delete()">
+            Submit
+          </button>
+        </section>
+
+      </form>
+        
+        <p id="output">
+        </p>
+    </div>
+    <br><br>
+    
+
+
+
+
+</html>

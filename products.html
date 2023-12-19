@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>unistyle</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<div class="site-name">
+    <h1>UNIstyle<h2>
+</div>
+<div class="navigation">
+  <div><a href="profile.html">Profile</a></div>
+  <div><a href="products.html">Products</a></div>
+  <div><a href="shopping-cart.html">Cart</a></div>
+  <div><a href="userlogin.html">Login</a></div>
+  <div><a href="adminlogin.html">Admin Login</a></div>
+  <div><a href="logout.html">Logout</a></div>
+</div>
+
+
+<h1>Product List</h1>
+
+<div ng-app="productApp" ng-controller="ProductController" class="ng-scope">
+  
+
+  <div id="productList" ng-init="loadProducts()" class="list">
+    <!-- Product list will be dynamically populated here -->
+    <div class = "products" ng-repeat="product in products">
+      <h3>{{ product.name }}</h3>
+      <p><img src= {{product.url}}></p>
+      <p><strong>Style:</strong> {{ product.style }}</p>
+      <p><strong>Color:</strong> {{ product.color }}</p>
+      <p><strong>Size:</strong> {{ product.size }}</p>
+      <p><strong>Price:</strong> {{ product.price }}</p>
+      
+      <!-- <p><strong>Enter Quantity:</strong><input type="text" id="quantity"  value=1>
+      </p> -->
+      <button ng-click="addToCart(product,'+')">Add to Cart</button>
+      <hr>
+    </div>
+  </div>
+    <br><br>
+    <button ng-click="next()">
+        Continue to Order
+    </button>
+    
+</div>
+
+
+</html>

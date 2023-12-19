@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>unistyle</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+  <script src="order-summary.js"></script>
+</head>
+<div class="site-name">
+    <h1>UNIstyle<h2>
+</div>
+<div class="navigation">
+  <div><a href="profile.html">Profile</a></div>
+  <div><a href="products.html">Products</a></div>
+  <div><a href="shopping-cart.html">Cart</a></div>
+  <div><a href="userlogin.html">Login</a></div>
+  <div><a href="adminlogin.html">Admin Login</a></div>
+  <div><a href="logout.html">Logout</a></div>
+</div>
+
+
+<div ng-app="myApp" ng-controller="myController" class="ng-scope">
+    
+          <h2>Order Placed</h2>
+           <h1>Order Summary</h1>
+          <div ng-init="cartDisplay()">
+            
+              <div ng-repeat="item in cart">
+                {{ item.name }} - Quantity: {{ item.quantity }} - Price: ${{ item.price * item.quantity }}
+              </div>
+          
+          </div>  
+
+          <p class="ng-scope">Total Price= ${{ sum }}</p>
+
+</div>
+
+    <p id="output">
+    </p>
+
+</html>

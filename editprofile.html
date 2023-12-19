@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>unistyle</title>
+  <link rel="stylesheet" href="style.css">
+    
+  <script src="angular.min.js"> </script>
+  <script src="editprofile.js"></script>
+</head>
+
+<div class="site-name">
+    <h1>UNIstyle<h2>
+</div>
+<div class="navigation">
+  <div><a href="profile.html">Profile</a></div>
+  <div><a href="products.html">Products</a></div>
+  <div><a href="shopping-cart.html">Cart</a></div>
+  <div><a href="userlogin.html">Login</a></div>
+  <div><a href="adminlogin.html">Admin Login</a></div>
+  <div><a href="logout.html">Logout</a></div>
+</div>
+
+
+
+<h2>Edit Profile</h2>
+    
+    <div ng-app="myApp" ng-controller="myController">
+        <form name="myForm" >
+          <section>
+            <label for="Username">New CollegeName</label>
+            <input type="text" ng-model="user.collegeName" ><br>
+            <button ng-click="collegeName()">
+                Update
+            </button><br>
+            <label for="email">Email</label>
+            <input type="text" ng-model="user.email"><br>
+            <button ng-click="email()">
+                Update
+            </button><br>
+          </section>
+        </form>
+        
+        <p id="output">
+        </p>
+    </div>
+    <br><br>
+    
+
+
+
+
+</html>

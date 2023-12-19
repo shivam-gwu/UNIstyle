@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>unistyle</title>
+  <link rel="stylesheet" href="style.css">
+    
+  <script src="angular.min.js"> </script>
+  <script src="userlogin.js"></script>
+</head>
+<div class="site-name">
+    <h1>UNIstyle<h2>
+</div>
+<div class="navigation">
+  <div><a href="profile.html">Profile</a></div>
+  <div><a href="products.html">Products</a></div>
+  <div><a href="shopping-cart.html">Cart</a></div>
+  <div><a href="userlogin.html">Login</a></div>
+  <div><a href="adminlogin.html">Admin Login</a></div>
+  <div><a href="logout.html">Logout</a></div>
+</div>
+
+
+
+
+    <div ng-app="myApp" ng-controller="myController">
+        <form name="myForm" >
+            <section>
+              <h2>Login</h2>
+              <label for="Username">Username</label>
+              <input type="text" id="Username" ng-model="user.username">
+
+              <label for="Password">Password</label>
+              <input type="password" id="Password" ng-model="user.password">
+
+              <button ng-click="submit()">
+                Submit
+              </button>
+            </section>
+            <section>
+            Don't have an account? <br>
+            <button ng-click="signup()">
+                Sign Up
+            </button>
+            </section>
+        </form>
+    </div>
+    
+    <p id="output">
+    </p>
+
+
+
+
+</html>
