@@ -1,4 +1,4 @@
-Website for selling hoodies to college representatives of different background 
+Website for selling hoodies to college representatives of different background.
 Database design can be seen in the Design Document.
 Database used to store data is the H2 database.
 There are html pages-
